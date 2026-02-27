@@ -4,7 +4,7 @@ import re
 import nltk
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
-
+nltk.download('stopwords')
 # Load saved model and vectorizer
 model = pickle.load(open("model.pkl", "rb"))
 vectorizer = pickle.load(open("vectorizer.pkl", "rb"))
@@ -32,3 +32,4 @@ if st.button("Predict"):
         st.success("Positive 😊")
     else:
         st.error("Negative 😡")
+
